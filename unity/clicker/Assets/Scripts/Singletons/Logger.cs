@@ -1,37 +1,40 @@
 using UnityEngine;
 
-public class Logger : MonoBehaviour, clicker.Interfaces.ILogger
+namespace clicker.Singletons
 {
-    private static Logger _instance;
-    public static Logger Instance
+    public class Logger : MonoBehaviour, clicker.Interfaces.ILogger
     {
-        get
+        private static Logger _instance;
+        public static Logger Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    GameObject loggerObject = new GameObject("Logger");
+                    _instance = loggerObject.AddComponent<Logger>();
+                    DontDestroyOnLoad(loggerObject);
+                }
+                return _instance;
+            }
+        }
+
+        private void Awake()
         {
             if (_instance == null)
             {
-                GameObject loggerObject = new GameObject("Logger");
-                _instance = loggerObject.AddComponent<Logger>();
-                DontDestroyOnLoad(loggerObject);
+                _instance = this;
+                DontDestroyOnLoad(gameObject);
             }
-            return _instance;
+            else if (_instance != this)
+            {
+                Destroy(gameObject);
+            }
         }
-    }
 
-    private void Awake()
-    {
-        if (_instance == null)
+        public void Log(string message)
         {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
+            Debug.Log(message);
         }
-        else if (_instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    public void Log(string message)
-    {
-        Debug.Log(message);
     }
 }
