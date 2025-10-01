@@ -1,4 +1,4 @@
-namespace clicker.Interfaces
+namespace Clicker.Interfaces
 {
     interface ILogger
     {

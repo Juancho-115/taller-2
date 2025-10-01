@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace clicker.Singletons
+namespace Clicker.Singletons
 {
-    public class Logger : MonoBehaviour, clicker.Interfaces.ILogger
+    public class Logger : MonoBehaviour, Clicker.Interfaces.ILogger
     {
         private static Logger _instance;
         public static Logger Instance

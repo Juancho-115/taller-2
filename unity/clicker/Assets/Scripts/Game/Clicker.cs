@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
-using clicker.Interfaces;
-using clicker.Singletons;
+using Clicker.Interfaces;
+using Clicker.Singletons;
 
-namespace clicker.Game
+namespace Clicker.Game
 {
     public class Clicker : MonoBehaviour, IClicker
     {
