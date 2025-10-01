@@ -1,49 +1,58 @@
 using UnityEngine;
 using UnityEngine.Events;
-using Clicker.Interfaces;
-using Clicker.Singletons;
+using UnityEngine.UI;
 
-namespace Clicker.Game
+public class Clicker : MonoBehaviour, IClicker
 {
-    public class Clicker : MonoBehaviour, IClicker
+    private int _cantidadClicks = 0;
+
+    public Text contadorClicksText;
+
+    public Clicker()
     {
-        private int _cantidadClicks = 0;
+        _cantidadClicks = 0;
+    }
 
-        public Clicker()
-        {
-            _cantidadClicks = 0;
-        }
+    private void Start()
+    {
+        _cantidadClicks = 0;
+        MyLogger.Instance.Log("Clicker inicializado con 0 clicks.");
+        Update();
+    }
+    public void OnClick()
+    {
+        _cantidadClicks++;
+        MyLogger.Instance.Log($"Click registrado. Total clicks: {_cantidadClicks}");
+        Update();
+    }
 
-        private void Start()
-        {
-            _cantidadClicks = 0;
-            Logger.Instance.Log("Clicker inicializado con 0 clicks.");
-        }
-        public void OnClick()
-        {
-            _cantidadClicks++;
-            Logger.Instance.Log($"Click registrado. Total clicks: {_cantidadClicks}");
-        }
+    public int ObtenerCantidadClicks()
+    {
+        return _cantidadClicks;
+    }
 
-        public int ObtenerCantidadClicks()
-        {
-            return _cantidadClicks;
-        }
+    public void OnButtonClick()
+    {
+        OnClick();
+    }
 
-        public void OnButtonClick()
-        {
-            OnClick();
-        }
+    public void ResetClicks()
+    {
+        _cantidadClicks = 0;
+        MyLogger.Instance.Log("Contador de clicks reseteado a 0.");
+        Update();
+    }
 
-        public void ResetClicks()
-        {
-            _cantidadClicks = 0;
-            Logger.Instance.Log("Contador de clicks reseteado a 0.");
-        }
+    public string ObtenerClicksComoString()
+    {
+        return _cantidadClicks.ToString();
+    }
 
-        public string ObtenerClicksComoString()
+    private void Update()
+    {
+        if (contadorClicksText != null)
         {
-            return _cantidadClicks.ToString();
+            contadorClicksText.text = _cantidadClicks.ToString();
         }
     }
 }

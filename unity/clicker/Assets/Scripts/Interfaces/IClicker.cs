@@ -1,7 +1,5 @@
-namespace Clicker.Interfaces
+
+public interface IClicker
 {
-    public interface IClicker
-    {
-        void OnClick();
-    }
+    void OnClick();
 }
