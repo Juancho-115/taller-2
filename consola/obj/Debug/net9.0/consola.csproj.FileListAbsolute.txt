@@ -1,0 +1,15 @@
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\bin\Debug\net9.0\consola.exe
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\bin\Debug\net9.0\consola.deps.json
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\bin\Debug\net9.0\consola.runtimeconfig.json
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\bin\Debug\net9.0\consola.dll
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\bin\Debug\net9.0\consola.pdb
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.AssemblyInfoInputs.cache
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.AssemblyInfo.cs
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.csproj.CoreCompileInputs.cache
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.sourcelink.json
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.dll
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\refint\consola.dll
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.pdb
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\consola.genruntimeconfig.cache
+C:\Users\garci\OneDrive\Escritorio\Taller2\consola\obj\Debug\net9.0\ref\consola.dll
