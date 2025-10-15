@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CounterTextDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Text? counterText;
+
+    private void Awake()
     {
-        
+        counterText = GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateCounter(int newCount)
     {
-        
+        if (counterText == null)
+        {
+            counterText = GetComponent<Text>();
+        }
+        counterText.text = $"Clicks: {newCount.ToString()}";
     }
 }
