@@ -1,9 +1,9 @@
 namespace Taller2.Clicker
 {
-    public class Clicker
+    public class Clicker : IClicker
     {
         private int cantidadClicks;
-        
+
         public void ProcesarClick()
         {
             cantidadClicks++;
