@@ -23,7 +23,7 @@ namespace Taller2.Clicker
 
         public void Log(string message)
         {
-            var logMessage = $"{System.DateTime.Now:0}: {message}";
+            var logMessage = $"{System.DateTime.Now}: {message}";
             UnityEngine.Debug.Log(message);
         }
     }
